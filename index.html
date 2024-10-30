@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Horizontal Nav</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            background-color: #f2f2f2;
+        }
+        .navbar a {
+            flex: 1;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            position: relative;
+        }
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: #4db6ac;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .navbar a:hover::after {
+            opacity: 1;
+        }
+        .navbar a.home {
+            background-color: #4db6ac;
+        }
+        .navbar a.service {
+            background-color: #424242;
+        }
+        .navbar a.project, .navbar a.about {
+            background-color: #f2f2f2;
+            color: #424242;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="home">HOME</a>
+        <a href="#" class="service">SERVICE</a>
+        <a href="#" class="project">PROJECT</a>
+        <a href="#" class="about">ABOUT</a>
+    </div>
+</body>
+</html>
